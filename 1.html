@@ -241,34 +241,15 @@ input[type=text]:focus{border:2px solid #f63}
 	
 	
 			
-		
-	  <div class="row">
-            <div class="col-md-12">
-                <div class="video-wrapper">
-
-                    <link rel="stylesheet" href="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.css" type="text/css"/>
-                    <script src="https://cdn.fluidplayer.com/v2/current/fluidplayer.min.js"></script>
-
-                    <video id='sample-video' controls style="width: 100%;">
-                     
-                        <source src='blob:https://twitter.com/aa6dee36-1d5e-41bf-a33a-5de3521c9bfe" type='video/mp4' />
-                    </video>
-
-                    <script>
-                        var myFP = fluidPlayer('sample-video', {
-                            layoutControls: {
-                                timelinePreview: {
-                                    file: '/images/valerian-thumbnails.vtt',
-                                    type: 'VTT'
-                                },
-                                fillToControls: true,
-                                posterImage: ' blob:https://twitter.com/f2b66913-5498-46e9-8643-a413d3735c89'
-                            }
-                        });
-                    </script>
-                </div>
-            </div>
-	
+	<html><head>
+		<meta name="viewport" content="width=device-width">
+		</head>
+		<body>
+			<video controls="" autoplay="" name="media">
+		<source src="blob:https://twitter.com/aa6dee36-1d5e-41bf-a33a-5de3521c9bfe" type="video/mp4">
+			</video>
+		</body>
+	</html>
 	
 	
 	
