@@ -1,8 +1,53 @@
-<div class="container">
+<html>
+<head>
+<script type="text/javascript" src="postAd.js"></script>
+<style type="text/css">
+#myspan{
+	height: 400px;
+}
+</style>
+<script src="jquery.js"></script>
+<script>
+$(document).ready(function(){
+	/*
+	$('#photos').submit(function(event){
+		event.preventDefault();
+	});
+	*/
+	
+	$('#myIFrame').load(function(){
+		var responseText = this.contentDocument.body.innerHTML;
+		//Do something with responseText.
+		console.log(responseText);
+		document.getElementById('myspan').innerHTML = responseText;
+	});
+});
+</script>
+</head>
+<body>
+<?php include('header.php'); ?>
 
-<div class="row" itemscope itemtype="https://schema.org/VideoObject">
-<div class="postad">
-<h3>Want More?</h3>
-<a class="roll-button" href="https://safebrowsing.bestmaleblogs.com/r?url=https%3A%2F%2Fjoin.hardbritlads.com%2Ftrack%2FMTE3MzEyMDAzNC4yLjQ2LjE1Ny4yLjAuMC4wLjA&amp;ot=u" rel="nofollow" data-trackevent="trendsout" data-event-id="92967" data-event-tag="bestmalevideos">Watch full video at Hard Brit Lads!</a>
-<a class="fp-toggle">replay video</a>
-</div>
+
+Item name:<input type='text' maxlenght='100' name='itemname' id='itemname' required/>
+Price:<input type='int' name='price' maxlenght='8' size='1' id='price'/></br>
+Item description:<input type='text' maxlenght='600' name='description' size='40' height='30' id='description' required/></br>
+
+
+<form method="POST" id="photos" action="uploadimg.php" enctype="multipart/form-data" target='submit-iframe'>
+Photo 1:<input type='file' name='photo[]' id='photo' multiple=""/>
+<input type='submit' value='send'/>
+</form>
+<div id="myspan"></div>
+
+
+Tags:<input type='text' name='tags' required id='tags' />
+<input type='submit' value='post Ad' onclick='postAd()'/></br>
+<span id='mySpan' ></span>
+
+<iframe name='submit-iframe' id='myIFrame'></iframe>
+
+<?php echo $_SESSION['1']; ?> // Here the browsers says: 
+
+
+</body>
+</html>
