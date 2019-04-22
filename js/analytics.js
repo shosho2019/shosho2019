@@ -1,0 +1,5 @@
+var scripts=document.getElementsByTagName('script');var myScript=scripts[scripts.length-1];var queryString=myScript.src.replace(/^[^\?]+\??/,'');var params=parseQuery(queryString);window.addEventListener("load",function(){window.cookieconsent.initialise({"cookie":{"name":"x-cookieconsent",},"palette":{"popup":{"background":"#252e39"},"button":{"background":"#0091dc"}},"content":{"message":"BestMaleVideos uses cookies to improve your experience and are critical to functionality.","href":"https://www.bestmalevideos.com/cookies/","dismiss":"Accept Cookies"}})
+enableAnalytics()});function parseQuery(query){var Params=new Object();if(!query)return Params;var Pairs=query.split(/[;&]/);for(var i=0;i<Pairs.length;i++){var KeyVal=Pairs[i].split('=');if(!KeyVal||KeyVal.length!=2)continue;var key=unescape(KeyVal[0]);var val=unescape(KeyVal[1]);val=val.replace(/\+/g,' ');Params[key]=val;}
+return Params;}
+function enableAnalytics(){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config',params["id"],{'anonymize_ip':true});}
