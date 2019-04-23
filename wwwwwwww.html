@@ -273,7 +273,8 @@ input[type=text]:focus{border:2px solid #f63}
 	
 	
 	
-	</ul>
+	</i></li>
+</ul>
 </div>
 </div>
 </div>
@@ -314,6 +315,51 @@ input[type=text]:focus{border:2px solid #f63}
 <p class="vidinfo pull-right">New video!</p>
 </div>
 </div>
+</div>
+<div class="panel-group" id="accordion">
+<div id="form-message"></div>
+<div class="row">
+<div class="col-sm-5 space">
+<form data-async data-target="#form-message" data-template="ajax" action="https://www.bestmalevideos.com/cgi-bin/tube/rate.cgi" method="post" role="form" id="rate-video" class="hidden-xs">
+<fieldset>
+<input type="hidden" name="ID" value="104464" />
+<div class="btn-group" data-toggle="buttons">
+<label class="btn btn-default">
+<input type="radio" name="rate" id="rate1" value="1"> 1
+</label>
+<label class="btn btn-default">
+<input type="radio" name="rate" id="rate2" value="2"> 2
+</label>
+<label class="btn btn-default">
+<input type="radio" name="rate" id="rate3" value="3"> 3
+</label>
+<label class="btn btn-default">
+<input type="radio" name="rate" id="rate4" value="4"> 4
+</label>
+<label class="btn btn-default">
+<input type="radio" name="rate" id="rate5" value="5"> 5
+</label>
+</div>
+<input type="submit" name="add" value="Vote!" class="btn btn-success" />
+</fieldset>
+</form>
+<form data-async data-target="#form-message" data-template="ajax" action="https://www.bestmalevideos.com/cgi-bin/tube/rate.cgi" method="post" role="form" id="rate-story-mobile" class="visible-xs-block">
+<fieldset>
+<input type="hidden" name="ID" value="104464" />
+<div class="input-group">
+<select class="form-control" id="rate" name="rate">
+<option value="1">1 star</option>
+<option value="2">2 stars</option>
+<option value="3">3 stars</option>
+<option value="4">4 stars</option>
+<option value="5">5 stars</option>
+</select>
+<span class="input-group-btn">
+<input type="submit" name="add" value="Vote!" class="btn btn-success" />
+</span>
+</div>
+</fieldset>
+</form>
 </div>
 	
 	
